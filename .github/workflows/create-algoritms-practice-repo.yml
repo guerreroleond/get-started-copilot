@@ -6,6 +6,8 @@ on:
 jobs:
   create-repo:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Create algoritms-practice repository
         env:
