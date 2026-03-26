@@ -1,0 +1,16 @@
+name: Create algoritms-practice Repository
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-repo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Create algoritms-practice repository
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh repo create ${{ github.repository_owner }}/algoritms-practice --public
